@@ -1,0 +1,110 @@
+form{
+    margin: 2rem;
+}
+
+input,
+textarea,
+select {
+    background-color: rgb(222, 226, 230);
+    width: 100%;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* input:focus, */
+/* textarea:focus { */
+/* } */
+
+.form-control {
+    padding: 0.5rem 2rem;
+    text-align: left;
+}
+
+.form-control label {
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.form-container {
+    width: 50%;
+    padding: 2rem;
+}
+
+.form-container input {
+    padding: 0.25rem;
+}
+
+.form-container h1 {
+    padding: 1rem;
+}
+
+.form-card {
+    background-color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 9px 5px rgb(116, 113, 113);
+    border-radius: 0.5rem;
+}
+
+.section-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.multi-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.multi-input div {
+    margin: 0.5rem;
+}
+
+.form-control-alt {
+    margin: 0 1rem;
+}
+
+.form-actions-alt {
+    color: white;
+}
+
+.mandatory-field {
+    color: red;
+}
+
+.image-container img {
+    height: 80vh;
+    width: 40vw;
+    object-fit: contain;
+}
+
+@media (max-width: 48rem) {
+    form {
+        margin: 1rem 0;
+    }
+
+    .form-container {
+        width: 70%;
+        padding: 1rem;
+    }
+
+    .multi-input {
+        display: block;
+    }
+
+    .multi-input div {
+        margin: 1rem 0;
+    }
+
+    .form-control {
+        padding: 0.5rem 0;
+    }
+
+    .form-card .image-container {
+        display: none;
+    }
+}

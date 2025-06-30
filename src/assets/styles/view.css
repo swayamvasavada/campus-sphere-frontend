@@ -1,0 +1,50 @@
+thead {
+    background-color: wheat;
+}
+
+tbody {
+    background-color: whitesmoke;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+tr i {
+    color: white;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+tr i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.info-btn {
+    background-color: teal;
+    padding: 0.3rem 0.5rem;
+}
+
+.info-btn:hover {
+    background-color: rgb(12, 75, 75);
+}
+
+.update-btn {
+    background-color: rgb(0, 0, 255);
+}
+
+.update-btn:hover {
+    background-color: rgb(14, 14, 152);
+}
+
+.delete-btn {
+    background-color: rgb(180, 30, 30);
+}
+
+.delete-btn:hover {
+    background-color: rgb(123, 12, 12);
+}
