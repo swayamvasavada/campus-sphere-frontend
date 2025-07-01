@@ -185,7 +185,7 @@ export default function AdminDashboard() {
                     <a href="/library" className="card-btn">
                         <h4 className="card-title">Books in Library</h4>
                         <p>
-                            {librarySummary?.hasError ? <Alert severity="error">{librarySummary.message}</Alert> : librarySummary?.totalBooks}
+                            {librarySummary?.hasError ? <Alert severity="error">{librarySummary.message}</Alert> : librarySummary?.totalBooks || 0}
                         </p>
                     </a>
                 </div>

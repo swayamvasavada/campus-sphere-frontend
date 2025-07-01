@@ -46,7 +46,7 @@ export default function StudentDashboard() {
                 setNoticeSummary({hasError: true, message: result.message})
                 return;
             }
-            
+
             setNoticeSummary(result.data);
             return;
         } catch (error) {
@@ -65,14 +65,14 @@ export default function StudentDashboard() {
                 <div className="card-alt">
                     <h4 className="card-title">Department</h4>
                     <p>
-                        {userSummary.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.dept?.deptName}
+                        {userSummary?.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.dept?.deptName}
                     </p>
                 </div>
 
                 <div className="card-alt">
                     <h4 className="card-title">Batch</h4>
                     <p>
-                        {userSummary.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.batch?.year}
+                        {userSummary?.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.batch?.year}
                     </p>
                 </div>
             </div>
