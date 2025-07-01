@@ -32,7 +32,6 @@ export default function IssuedBook() {
                     return;
                 }
 
-                console.log("Issuers list: ", result);
                 setList(result.data);
             } catch (error) {
                 setError(true);

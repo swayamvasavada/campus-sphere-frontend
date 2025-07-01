@@ -32,7 +32,6 @@ export default function Login() {
             if (res.ok) {
                 const result = await res.json();
 
-                console.log(result);
                 if (result.hasError) {
                     setError(result.message);
                 } else {

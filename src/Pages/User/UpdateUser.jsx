@@ -59,7 +59,6 @@ export default function UpdateUser() {
                     desg: result.desg,
                 }
 
-                console.log('Initial state: ', initialState);
                 setFormData(initialState);
             } catch (error) {
                 console.log("Error: ", error);

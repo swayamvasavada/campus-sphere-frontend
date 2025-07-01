@@ -14,8 +14,7 @@ export default function AddBooks() {
 
     function validate() {
         const { bookName, author, totalBooks } = bookData;
-        console.log(bookData);
-        
+
         if (!bookName || !bookName.trim()) {
             setError(true);
             setMessage("Book name is required.");
@@ -42,7 +41,6 @@ export default function AddBooks() {
     function handleChange(e) {
         const { name, value } = e.target;
         setBookData({ ...bookData, [name]: value });
-        console.log(bookData);
     }
 
     async function insertBook(e) {

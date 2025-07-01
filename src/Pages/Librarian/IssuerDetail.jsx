@@ -40,7 +40,6 @@ export default function IssuerDetail() {
                     return;
                 }
 
-                console.log("Data: ", result);
                 setUserData(result.userDetails);
                 setIssuerData(result.issuerDetails);
                 setBookData(result.bookDetails);

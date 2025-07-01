@@ -71,8 +71,6 @@ export default function CreateBatch() {
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-
-        console.log(formData);
     }
 
     function validateSection(section) {
@@ -141,9 +139,6 @@ export default function CreateBatch() {
                 credentials: 'include'
             });
 
-            console.log(res);
-            
-
             const result = await res.json();
 
             if (result.hasError) {
@@ -154,7 +149,6 @@ export default function CreateBatch() {
 
             navigate('/');
         } catch (error) {
-            console.log("Error: ", error);
             setError(true);
             setMessage("Something went wrong!");
         }

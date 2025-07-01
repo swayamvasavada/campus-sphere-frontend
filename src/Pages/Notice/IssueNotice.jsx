@@ -19,9 +19,7 @@ export default function IssueNotice() {
     }
 
     function validate() {
-        const { noticeTitle, noticeMessage, noticeLevel } = formData;
-        console.log(noticeTitle, noticeMessage, noticeLevel);
-        
+        const { noticeTitle, noticeMessage, noticeLevel } = formData;        
         if (!noticeTitle || !noticeMessage || !noticeLevel) {
             return false;
         }

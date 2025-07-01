@@ -78,8 +78,6 @@ export default function AdminDashboard() {
             });
 
             const result = await res.json();
-
-            console.log("Notice result: ", result.data);
             setLibrarySummary(result.data);
             return;
         } catch (error) {
@@ -99,8 +97,6 @@ export default function AdminDashboard() {
             });
 
             const result = await res.json();
-
-            console.log("Payment result: ", result.data);
             setPaymentSummary(result.data);
             return;
         } catch (error) {
@@ -120,8 +116,6 @@ export default function AdminDashboard() {
             });
 
             const result = await res.json();
-
-            console.log("Notice result: ", result.data);
             setNoticeSummary(result.data);
             return;
         } catch (error) {
@@ -146,7 +140,7 @@ export default function AdminDashboard() {
                     <a href="/departments" className="card-btn">
                         <h4 className="card-title">Departments</h4>
                         <p>
-                            {deptSummary.hasError ? <Alert severity="error">{deptSummary.message}</Alert> : deptSummary.result}
+                            {deptSummary?.hasError ? <Alert severity="error">{deptSummary.message}</Alert> : deptSummary.result}
                         </p>
                     </a>
                 </div>
@@ -155,7 +149,7 @@ export default function AdminDashboard() {
                     <a href="/batch" className="card-btn">
                         <h4 className="card-title">Batches</h4>
                         <p>
-                            {batchSummary.hasError ? <Alert severity="error">{batchSummary.message}</Alert> : batchSummary.result}
+                            {batchSummary?.hasError ? <Alert severity="error">{batchSummary.message}</Alert> : batchSummary.result}
                         </p>
                     </a>
                 </div>
@@ -164,7 +158,7 @@ export default function AdminDashboard() {
                     <a href="/users" className="card-btn">
                         <h4 className="card-title">Students</h4>
                         <p>
-                            {userSummary.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.studentCount}
+                            {userSummary?.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.studentCount}
                         </p>
                     </a>
                 </div>
@@ -173,7 +167,7 @@ export default function AdminDashboard() {
                     <a href="/users" className="card-btn">
                         <h4 className="card-title">Faculties</h4>
                         <p>
-                            {userSummary.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.facultyCount}
+                            {userSummary?.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.facultyCount}
                         </p>
                     </a>
                 </div>
@@ -182,7 +176,7 @@ export default function AdminDashboard() {
                     <a href="/users" className="card-btn">
                         <h4 className="card-title">Non Teaching Staff</h4>
                         <p>
-                            {userSummary.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.nonTeachingCount}
+                            {userSummary?.hasError ? <Alert severity="error">{userSummary.message}</Alert> : userSummary?.result?.nonTeachingCount}
                         </p>
                     </a>
                 </div>
@@ -191,7 +185,7 @@ export default function AdminDashboard() {
                     <a href="/library" className="card-btn">
                         <h4 className="card-title">Books in Library</h4>
                         <p>
-                            {librarySummary.hasError ? <Alert severity="error">{librarySummary.message}</Alert> : librarySummary?.totalBooks}
+                            {librarySummary?.hasError ? <Alert severity="error">{librarySummary.message}</Alert> : librarySummary?.totalBooks}
                         </p>
                     </a>
                 </div>

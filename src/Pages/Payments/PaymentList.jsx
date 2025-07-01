@@ -32,7 +32,6 @@ export default function ViewPayments() {
                     return;
                 }
 
-                console.log(result);
                 setList(result.data.fees);
             } catch (error) {
                 setError(true);

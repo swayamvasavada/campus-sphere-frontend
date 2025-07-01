@@ -74,7 +74,6 @@ function FeeReceipt({ paymentData }) {
                     return;
                 }
 
-                console.log("Data: ", result);
                 setUserData(result.data);
             } catch (error) {
                 console.log("Error: ", error);

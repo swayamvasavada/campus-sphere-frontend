@@ -32,7 +32,6 @@ export default function ViewAllPayments() {
                     return;
                 }
 
-                console.log("Payment list: ", result);
                 setList(result.data);
 
                 const now = new Date();

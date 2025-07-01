@@ -1,8 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 function PaymentStats({ data }) {
-    console.log("Data: ", data);
-
     if (!Array.isArray(data) || data.length === 0) {
         return <div>No data available.</div>;
     }
@@ -12,10 +10,7 @@ function PaymentStats({ data }) {
         date: item.paidOn.split('T')[0], // Extracting the date part (e.g., "2025-06-25")
         Amount: item.amount,
         Penalty: item.penalty || 0, // Default to 0 if penalty is missing
-    }));
-
-    console.log("Char data: ", chartData);
-    
+    }));    
 
     return (
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

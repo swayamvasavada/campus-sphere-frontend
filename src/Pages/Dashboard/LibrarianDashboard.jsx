@@ -15,8 +15,6 @@ export default function LibrarianDashboard() {
             });
 
             const result = await res.json();
-
-            console.log("Library Summary result: ", result.data);
             setLibrarySummary(result.data);
             return;
         } catch (error) {

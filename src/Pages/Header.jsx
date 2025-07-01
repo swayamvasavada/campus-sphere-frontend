@@ -9,10 +9,7 @@ export default function Header() {
     const [isDropdownOpen, setDropdown] = useState(false);
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const [userInfo, setInfo] = useState(null);
-
-    console.log("Cookies: ", Cookies.get('authToken'));
-    
+    const [userInfo, setInfo] = useState(null);    
 
     useEffect(function () {
         async function fetchUserInfo() {
@@ -27,8 +24,6 @@ export default function Header() {
 
                 const result = await res.json();
                 if (!result.hasError) {
-                    console.log(result);
-
                     setInfo(result.data);
                     return;
                 }

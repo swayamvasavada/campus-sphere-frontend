@@ -37,7 +37,6 @@ export default function NoticeDetail() {
                     return;
                 }
 
-                console.log("Data: ", result);
                 setNoticeData(result.noticeData);
                 setUserData(result.userData);
             } catch (error) {

@@ -39,7 +39,6 @@ export default function IssueBook() {
                     return;
                 }
 
-                console.log(result.data);
                 setBookData(result.data);
             } catch (error) {
                 console.log("Error: ", error);
@@ -70,7 +69,6 @@ export default function IssueBook() {
                     return;
                 }
 
-                console.log(result.data);
                 setDeptList(result.data);
                 return;
             } catch (error) {
@@ -88,7 +86,6 @@ export default function IssueBook() {
             if (!issuerData.dept) return;
 
             setError(false);
-            console.log("Form data: ", issuerData);
 
             try {
                 const res = await fetch(`${process.env.REACT_APP_API_URL}/users/dept/${issuerData.dept._id}`, {
@@ -152,8 +149,7 @@ export default function IssueBook() {
             setUserList([]);
             return;
         }
-        console.log("Dept data: ", deptData);
-
+        
         setIssuerData({ ...issuerData, 'dept': deptData });
     }
 

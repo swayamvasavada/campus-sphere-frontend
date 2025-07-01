@@ -31,7 +31,6 @@ export default function ViewUsers() {
                     return;
                 }
 
-                console.log(result);
                 setList(result.data);
             } catch (error) {
                 setError(true);

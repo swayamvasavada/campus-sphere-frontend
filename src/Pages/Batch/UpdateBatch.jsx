@@ -26,9 +26,7 @@ function Section1({ formData, handleChange }) {
     )
 }
 
-function Section2({ formData, handleChange }) {
-    console.log("Form Data: ", formData);
-    
+function Section2({ formData, handleChange }) {    
     return (
         <div>
             <div className="section-title">
@@ -80,7 +78,6 @@ export default function UpdateBatch() {
                     return;
                 }
                 result = result.data;
-                console.log("Result: ",result);
 
                 const initialState = {
                     year: result.year,
@@ -94,7 +91,6 @@ export default function UpdateBatch() {
 
                 setFormData(initialState);
             } catch (error) {
-                console.log("Error: ", error);
                 setError(true);
                 setMessage("Something went wrong!");
             }
@@ -116,8 +112,6 @@ export default function UpdateBatch() {
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-
-        console.log(formData);
     }
 
     function validateSection(section) {

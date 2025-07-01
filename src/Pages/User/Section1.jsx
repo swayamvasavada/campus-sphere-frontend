@@ -1,6 +1,4 @@
-export default function Section1({ formData, handleChange }) {
-    console.log(formData);
-    
+export default function Section1({ formData, handleChange }) {    
     return (
         <div>
             <div className="section-title">

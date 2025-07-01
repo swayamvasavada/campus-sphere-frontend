@@ -67,7 +67,6 @@ export default function ResetPassword() {
             setError(false);
 
             if (result.hasError) setError(true);
-            console.log(result);
             setMessage(result.message);
             return;
         } catch (error) {

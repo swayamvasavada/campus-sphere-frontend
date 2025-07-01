@@ -16,7 +16,6 @@ export default function StudentDashboard() {
             });
 
             const result = await res.json();
-            console.log("Result: ", result);
 
             if (result.hasError) {
                 setUserSummary({ hasError: true, message: result.message });
@@ -47,8 +46,7 @@ export default function StudentDashboard() {
                 setNoticeSummary({hasError: true, message: result.message})
                 return;
             }
-
-            console.log("Notice result: ", result.data);
+            
             setNoticeSummary(result.data);
             return;
         } catch (error) {

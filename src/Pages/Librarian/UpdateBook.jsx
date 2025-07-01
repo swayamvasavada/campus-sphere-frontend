@@ -46,7 +46,6 @@ export default function UpdateBooks() {
 
     function validate() {
         const { bookName, author, totalBooks } = bookData;
-        console.log(bookData);
 
         if (!bookName || !bookName.trim()) {
             setError(true);
@@ -74,7 +73,6 @@ export default function UpdateBooks() {
     function handleChange(e) {
         const { name, value } = e.target;
         setBookData({ ...bookData, [name]: value });
-        console.log(bookData);
     }
 
     async function updateBook(e) {

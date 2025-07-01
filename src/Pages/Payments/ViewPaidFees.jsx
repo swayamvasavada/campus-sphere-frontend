@@ -33,7 +33,6 @@ export default function PaidFees() {
                     return;
                 }
 
-                console.log("Payment list: ", result);
                 setList(result.data);
             } catch (error) {
                 setError(true);
