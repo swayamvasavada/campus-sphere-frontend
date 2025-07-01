@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
+import Cookies from "js-cookie";
 import loginImage from "../../assets/images/login_img.jpg";
 import "../../assets/styles/base.css";
 import "../../assets/styles/forms.css";
@@ -35,6 +36,11 @@ export default function Login() {
                 if (result.hasError) {
                     setError(result.message);
                 } else {
+                    Cookies.set("authToken", JSON.stringify(result.payload), {
+                        expires: 1,
+                        sameSite: 'None',
+                        secure: true
+                    });
                     navigate('/dashboard');
                 }
             }
