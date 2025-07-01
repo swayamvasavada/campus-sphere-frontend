@@ -11,6 +11,9 @@ export default function Header() {
     const dropdownRef = useRef(null);
     const [userInfo, setInfo] = useState(null);
 
+    console.log("Cookies: ", Cookies);
+    
+
     useEffect(function () {
         async function fetchUserInfo() {
             try {
