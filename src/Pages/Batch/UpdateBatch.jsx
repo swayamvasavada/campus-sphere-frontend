@@ -66,7 +66,8 @@ export default function UpdateBatch() {
                 const res = await fetch(`${process.env.REACT_APP_API_URL}/batch/${batchId}`, {
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'authorization': `${localStorage.getItem("authToken")}`
                     },
                     credentials: 'include'
                 });
@@ -166,6 +167,7 @@ export default function UpdateBatch() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 body: JSON.stringify(formData),
                 credentials: 'include'

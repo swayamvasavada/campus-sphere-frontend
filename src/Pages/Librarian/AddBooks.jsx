@@ -55,7 +55,8 @@ export default function AddBooks() {
             const res = await fetch(`${process.env.REACT_APP_API_URL}/library/add-book`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 body: JSON.stringify(bookData),
                 credentials: 'include'

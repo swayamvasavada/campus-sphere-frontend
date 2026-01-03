@@ -24,6 +24,7 @@ export default function UpdateDepartment() {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
+                        'authorization': `${localStorage.getItem("authToken")}`
                     },
                     credentials: 'include'
                 });
@@ -69,6 +70,7 @@ export default function UpdateDepartment() {
                 body: JSON.stringify({ deptName: deptName }),
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include'
             });

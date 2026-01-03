@@ -35,11 +35,7 @@ export default function Login() {
                 if (result.hasError) {
                     setError(result.message);
                 } else {
-                    Cookies.set("authToken", JSON.stringify(result.payload), {
-                        expires: 1,
-                        sameSite: 'None',
-                        secure: true
-                    });
+                    localStorage.setItem("authToken", JSON.stringify(result.payload));
                     navigate('/dashboard');
                 }
             }

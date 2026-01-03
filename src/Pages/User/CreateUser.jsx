@@ -89,6 +89,7 @@ export default function CreateUser() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include',
                 body: JSON.stringify(formData)

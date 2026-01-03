@@ -48,6 +48,7 @@ export default function IssueNotice() {
                 body: JSON.stringify(formData),
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include'
             });

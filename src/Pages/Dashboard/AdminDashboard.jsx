@@ -16,7 +16,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -35,7 +36,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -54,7 +56,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -73,7 +76,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -92,7 +96,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -111,7 +116,8 @@ export default function AdminDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 

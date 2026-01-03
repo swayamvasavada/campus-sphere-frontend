@@ -134,6 +134,7 @@ export default function CreateBatch() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 body: JSON.stringify(formData),
                 credentials: 'include'

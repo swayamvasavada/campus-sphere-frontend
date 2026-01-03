@@ -21,6 +21,7 @@ export default function ViewPayments() {
                     credentials: 'include',
                     headers: {
                         'Content-Type': 'application/json',
+                        'authorization': `${localStorage.getItem("authToken")}`
                     }
                 });
 

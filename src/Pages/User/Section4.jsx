@@ -9,6 +9,7 @@ export default function Section4({ formData, handleChange }) {
             const res = await fetch(`${process.env.REACT_APP_API_URL}/dept/`, {
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include'
             });
@@ -27,6 +28,7 @@ export default function Section4({ formData, handleChange }) {
             const res = await fetch(`${process.env.REACT_APP_API_URL}/batch/`, {
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include'
             });

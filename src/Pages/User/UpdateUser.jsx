@@ -26,7 +26,8 @@ export default function UpdateUser() {
                 const res = await fetch(`${process.env.REACT_APP_API_URL}/user/${userId}`, {
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'authorization': `${localStorage.getItem("authToken")}`
                     },
                     credentials: 'include'
                 });
@@ -136,6 +137,7 @@ export default function UpdateUser() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include',
                 body: JSON.stringify(formData)

@@ -37,6 +37,7 @@ export default function CreateDepartment() {
                 body: JSON.stringify({ deptName: deptName }),
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 },
                 credentials: 'include'
             });

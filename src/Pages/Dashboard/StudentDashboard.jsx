@@ -11,7 +11,8 @@ export default function StudentDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
@@ -36,7 +37,8 @@ export default function StudentDashboard() {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 

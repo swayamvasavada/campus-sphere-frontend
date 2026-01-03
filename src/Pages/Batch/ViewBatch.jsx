@@ -20,6 +20,7 @@ export default function ViewBatch() {
                     credentials: 'include',
                     headers: {
                         'Content-Type': 'application/json',
+                        'authorization': `${localStorage.getItem("authToken")}`
                     }
                 });
 
@@ -53,6 +54,7 @@ export default function ViewBatch() {
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
+                    'authorization': `${localStorage.getItem("authToken")}`
                 }
             });
 
