@@ -35,7 +35,7 @@ export default function Login() {
                     setError(result.message);
                 } else {
                     localStorage.setItem("authToken", JSON.stringify(result.payload));
-                    localStorage.setItem("desg", JSON.stringify(result.payload.desg));
+                    localStorage.setItem("desg", result.payload.desg);
                     navigate('/dashboard');
                 }
             }
