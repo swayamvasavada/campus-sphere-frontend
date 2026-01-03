@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Alert } from '@mui/material';
-import Cookies from 'js-cookie';
 
 import "../../assets/styles/base.css";
 import "../../assets/styles/forms.css";
@@ -71,7 +70,7 @@ export default function ViewPayments() {
                                     })} </TableCell>
                                     <TableCell align="right">
                                         <form style={{margin: 0}} action={`${process.env.REACT_APP_API_URL}/fees/pay-now/${feeData?.semesterNo}`} method="post">
-                                            <input type="hidden" name="authToken" value={Cookies.get("authToken")} />
+                                            <input type="hidden" name="authToken" value={localStorage.getItem("authToken")} />
                                             <button className="info-btn" title={`Pay Semester ${feeData?.semesterNo} Fees`}>
                                                 <i className="fa-solid fa-money-check"></i> Pay now
                                             </button>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "@mui/material";
-import Cookies from "js-cookie";
 import loginImage from "../../assets/images/login_img.jpg";
 import "../../assets/styles/base.css";
 import "../../assets/styles/forms.css";
@@ -36,6 +35,7 @@ export default function Login() {
                     setError(result.message);
                 } else {
                     localStorage.setItem("authToken", JSON.stringify(result.payload));
+                    localStorage.setItem("desg", JSON.stringify(result.payload.desg));
                     navigate('/dashboard');
                 }
             }

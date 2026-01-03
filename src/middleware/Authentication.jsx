@@ -1,10 +1,9 @@
 import { Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
 
 export default function Auth({ children }) {
-    const cookies = Cookies.get("authToken");
+    const token = localStorage.getItem("authToken");
     
-    if (!cookies) {
+    if (!token) {
         return <Navigate to="/login" replace />
     }
 

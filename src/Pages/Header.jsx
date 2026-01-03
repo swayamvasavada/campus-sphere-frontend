@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
 import Sidebar from "./Sidebar";
 import "../assets/styles/header.css";
 
@@ -48,7 +47,8 @@ export default function Header() {
     }
 
     function handleLogout() {
-        Cookies.remove("authToken");
+        localStorage.clear("authToken");
+        localStorage.clear("desg");
         return navigate("/login");
     }
 
