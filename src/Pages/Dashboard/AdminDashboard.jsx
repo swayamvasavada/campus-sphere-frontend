@@ -134,7 +134,7 @@ export default function AdminDashboard() {
     }, []);
 
     return (
-        <main className="">
+        <main>
             <div className="card-alt-container">
                 <div className="card-alt">
                     <a href="/departments" className="card-btn">

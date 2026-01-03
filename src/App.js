@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 
 import Authentication from "./middleware/Authentication";
@@ -40,17 +40,21 @@ import IssuerDetail from "./Pages/Librarian/IssuerDetail";
 import ViewPayments from "./Pages/Payments/PaymentList";
 import PaidFees from "./Pages/Payments/ViewPaidFees";
 import ViewAllPayments from "./Pages/Payments/ViewAllPayments";
+import PaymentSuccess from "./Pages/PaymentSuccess";
+import PaymentFailure from "./Pages/PaymentFailure";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to={"/dashboard"} replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/reset-password" element={<RequesReset />} />
         <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
         <Route element={<Layout />}>
           <Route path="/users" element={<Authentication> <Authorization allowedRoles={["Admin"]}> <ViewUsers /> </Authorization> </Authentication>} />
           <Route path="/users/view/:userId" element={<Authentication> <Authorization allowedRoles={["Admin"]}> <UserDetails /> </Authorization> </Authentication>} />
+          {/* <Route path="/create-user" element={<CreateUser />} /> */}
           <Route path="/create-user" element={<Authentication> <Authorization allowedRoles={["Admin"]}> <CreateUser /> </Authorization> </Authentication>} />
           <Route path="/update-user/:userId" element={<Authentication> <Authorization allowedRoles={["Admin"]}> <UpdateUser /> </Authorization> </Authentication>} />
           <Route path="/change-password" element={<Authentication> <Authorization allowedRoles={["Student", "Faculty", "Librarian", "Admin"]}> <ChangePassword /> </Authorization> </Authentication>} />
@@ -80,6 +84,9 @@ function App() {
           <Route path="/payments" element={<Authentication> <Authorization allowedRoles={["Student"]}> <ViewPayments /> </Authorization> </Authentication>} />
           <Route path="/payments/view-payments" element={<Authentication> <Authorization allowedRoles={["Admin"]}> <ViewAllPayments /> </Authorization> </Authentication>} />
           <Route path="/payments/paid-fees" element={<Authentication> <Authorization allowedRoles={["Student"]}> <PaidFees /> </Authorization> </Authentication>} />
+
+          <Route path="/fees/success" element={<PaymentSuccess />} />
+          <Route path="/fees/failure" element={<PaymentFailure />} />
         </Route>
       </Routes>
     </BrowserRouter>

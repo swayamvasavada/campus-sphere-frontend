@@ -5,6 +5,7 @@ export default function Sidebar({ open, toggleDrawer }) {
     const [deptOptions, setDeptOptions] = useState(false);
     const [batchOptions, setBatchOptions] = useState(false);
     const [userOptions, setUserOptions] = useState(false);
+    const [paymentOptions, setPaymentOptions] = useState(false);
 
     const DrawerList = (
         <Box sx={{ width: 250 }} role="alert">
@@ -82,6 +83,27 @@ export default function Sidebar({ open, toggleDrawer }) {
                         <ListItem disablePadding>
                             <ListItemButton sx={{ pl: 4 }} href="/users">
                                 <ListItemText primary="Manage Users" />
+                            </ListItemButton>
+                        </ListItem>
+                    </>
+                )}
+
+                <ListItem disablePadding>
+                    <ListItemButton onClick={() => setPaymentOptions(prev => !prev)}>
+                        <ListItemText primary="Payments" />
+                    </ListItemButton>
+                </ListItem>
+
+                {paymentOptions && (
+                    <>
+                        <ListItem disablePadding>
+                            <ListItemButton sx={{ pl: 4 }} href="/payments">
+                                <ListItemText primary="Pay fees" />
+                            </ListItemButton>
+                        </ListItem>
+                        <ListItem disablePadding>
+                            <ListItemButton sx={{ pl: 4 }} href="/payments/paid-fees">
+                                <ListItemText primary="View paid fees" />
                             </ListItemButton>
                         </ListItem>
                     </>
